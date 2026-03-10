@@ -1,0 +1,23 @@
+`timescale 1 ps / 1 ps
+
+module design_1_wrapper
+   (m_axis_data_tdata_0,
+    m_axis_data_tvalid_0,
+    reset,
+    sys_clock);
+  output [15:0]m_axis_data_tdata_0;
+  output m_axis_data_tvalid_0;
+  input reset;
+  input sys_clock;
+
+  wire [15:0]m_axis_data_tdata_0;
+  wire m_axis_data_tvalid_0;
+  wire reset;
+  wire sys_clock;
+
+  design_1 design_1_i
+       (.m_axis_data_tdata_0(m_axis_data_tdata_0),
+        .m_axis_data_tvalid_0(m_axis_data_tvalid_0),
+        .reset(reset),
+        .sys_clock(sys_clock));
+endmodule
